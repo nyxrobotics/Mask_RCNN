@@ -17,18 +17,16 @@ from collections import OrderedDict
 import multiprocessing
 import numpy as np
 import tensorflow as tf
-import keras
-import keras.backend as K
-import keras.layers as KL
-import keras.engine as KE
-import keras.models as KM
+from tensorflow.keras import backend as K
+from tensorflow.keras import layers as KL
+from tensorflow.keras import models as KM
+from tensorflow.keras import engine as KE
 
 from mrcnn import utils
 
-# Requires TensorFlow 1.3+ and Keras 2.0.8+.
-from distutils.version import LooseVersion
-assert LooseVersion(tf.__version__) >= LooseVersion("1.3")
-assert LooseVersion(keras.__version__) >= LooseVersion('2.0.8')
+# Ensure TensorFlow 2.x and Keras integrated within TensorFlow
+assert LooseVersion(tf.__version__) >= LooseVersion("2.0")
+assert LooseVersion(tf.keras.__version__) >= LooseVersion('2.0.0')
 
 
 ############################################################
