@@ -13,10 +13,10 @@ https://github.com/avolkov1/keras_experiments/blob/master/keras_exp/multigpu/
 https://github.com/fchollet/keras/blob/master/keras/utils/training_utils.py
 """
 
-import keras.backend as K
-import keras.layers as KL
-import keras.models as KM
 import tensorflow as tf
+import tensorflow.keras.backend as K
+import tensorflow.keras.layers as KL
+import tensorflow.keras.models as KM
 
 
 class ParallelModel(KM.Model):
@@ -113,8 +113,8 @@ if __name__ == "__main__":
 
     import os
 
-    import keras.optimizers
     import numpy as np
+    import tensorflow.keras.optimizers
     from keras.datasets import mnist
     from keras.preprocessing.image import ImageDataGenerator
 
